@@ -4,6 +4,7 @@ enable_testing()
 
 add_executable(test-with-simple-stub
     AffairsTest.cxx
+    GoodAffairTest.cxx
     DecoyToolkit.h)
 
 target_include_directories(test-with-simple-stub PRIVATE wed3pm)

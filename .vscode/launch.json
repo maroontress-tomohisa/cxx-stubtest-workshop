@@ -20,6 +20,26 @@
                 }
             ],
             "preLaunchTask": "Build"
+        },
+        {
+            "name": "Launch Test (tiny mock)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/test-with-tiny-mock/test-with-tiny-mock",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build"
         }
     ]
 }

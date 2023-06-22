@@ -7,8 +7,8 @@ namespace wed3pm {
 
     class Affairs final {
     public:
-        static auto newTimePoint(int year, int month, int day, int hour)
-            -> std::chrono::system_clock::time_point;
+        static auto newTimePoint(int year, int month, int day, int hour,
+            int min = 0, int sec = 0) -> std::chrono::system_clock::time_point;
         static auto broadcastOnTime(const Toolkit& kit) -> void;
     };
 }

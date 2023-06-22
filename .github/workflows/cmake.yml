@@ -37,6 +37,9 @@ jobs:
         with:
           name: coverage
           path: ${{github.workspace}}/build/coverage
-      - name: Test
+      - name: Test (Simple Stub)
         working-directory: ${{github.workspace}}/build/test-with-simple-stub
+        run: ctest -C ${{env.BUILD_TYPE}}
+      - name: Test (Tiny Mock)
+        working-directory: ${{github.workspace}}/build/test-with-tiny-mock
         run: ctest -C ${{env.BUILD_TYPE}}

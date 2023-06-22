@@ -1,16 +1,16 @@
 #include "wed3pm/Affairs.h"
 
 auto
-wed3pm::Affairs::newTimePoint(int year, int month, int day, int hour)
-    -> std::chrono::system_clock::time_point
+wed3pm::Affairs::newTimePoint(int year, int month, int day, int hour,
+    int min, int sec) -> std::chrono::system_clock::time_point
 {
     auto tm = std::tm {};
     tm.tm_year = year - 1900;
     tm.tm_mon = month - 1;
     tm.tm_mday = day;
     tm.tm_hour = hour;
-    tm.tm_min = 0;
-    tm.tm_sec = 0;
+    tm.tm_min = min;
+    tm.tm_sec = sec;
     return std::chrono::system_clock::from_time_t(std::mktime(&tm));
 }
 
